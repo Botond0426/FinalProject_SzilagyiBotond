@@ -6,10 +6,11 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
+
 public class BasePage {
     public static WebDriver driver;
     private String BASE_URL =
-            "https://www.lambdatest.com/selenium-playground/";
+            "https://ecommerce-playground.lambdatest.io/index.php?route=common/home";
     public BasePage() {
 // Default constructor
     }
