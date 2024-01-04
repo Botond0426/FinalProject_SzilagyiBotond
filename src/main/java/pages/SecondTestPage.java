@@ -16,11 +16,15 @@ public class SecondTestPage extends BasePage {
     public void clickOnPhone(){
         ShopThePhone.click();
     }
-    @FindBy(xpath ="//*[@id=\"notification-box-top\"]/div/div[2]/div[2]/div[2]/a")
-    private WebElement ShopNotification1;
-    public void clickOnShopNotification1(){
-        ShopNotification1.click();
+
+    @FindBy(xpath ="//*[@id=\"entry_217825\"]/a/div[1]/div/svg")
+    private WebElement ShopCart1;
+    public void clickOnShopCart1(){
+        ShopCart1.click();
     }
+    @FindBy(xpath = "//*[@id=\"entry_217851\"]/a")
+    private WebElement CheckOut1;
+    public void clickOnCheckout1(){CheckOut1.click();}
     @FindBy(xpath = "//*[@id=\"input-payment-firstname\"]")
     private WebElement FirstNameField;
     public void enterTextInFirstNameField(String text){FirstNameField.sendKeys(text);}

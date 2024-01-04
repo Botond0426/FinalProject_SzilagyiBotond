@@ -23,19 +23,5 @@ public class FirstTestCaseComponentsCategory extends BasePage {
         String expectedTitle = "Components";
         Assert.assertEquals(actualTitle, expectedTitle,"Title does not match");
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    //Tested if after accessing the item categories and if user clicks on Components,the same title will appear.
 }

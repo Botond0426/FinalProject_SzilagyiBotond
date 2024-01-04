@@ -33,7 +33,7 @@ public class TenthTestPage extends BasePage{
     public void clickOnSubmitAccountUpdate(){submitAccountUpdate.click();}
     @FindBy(css = "#account-account > div.alert.alert-success.alert-dismissible > i")
     private WebElement getTextAfterUpdate;
-    public void setGetTextAfterUpdate(String text){getTextAfterUpdate.getText();}
+    public String setGetTextAfterUpdate(){return getTextAfterUpdate.getText();}
 
 
 }

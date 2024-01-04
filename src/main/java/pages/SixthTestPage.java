@@ -25,6 +25,6 @@ public class SixthTestPage extends BasePage{
     public void clickOnSony1(){Sony1.click();}
     @FindBy(xpath = "//*[@id=\"entry_212427\"]/h1")
     private WebElement SonyTitle;
-    public void getTextOfSony(String text){SonyTitle.getText();}
+    public String getTextOfSony(){ return SonyTitle.getText();}
 
 }

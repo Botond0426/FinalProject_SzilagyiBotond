@@ -16,16 +16,14 @@ public class FourthTestPage extends BasePage {
     public void clickOnShopAppleDisplay(){ShopAppleDisplay.click();}
    @FindBy(xpath = "//*[@id=\"entry_212943\"]/div")
     private WebElement minimumQtyRequirement;
-    public void getTextInRequirements(String text){
-        minimumQtyRequirement.getText();
+    public String getTextInRequirements(){ return minimumQtyRequirement.getText();
     }
     @FindBy(xpath = "//*[@id=\"entry_212964\"]/button")
     private WebElement addToCartApple;
     public void clickOnAddToCartApple(){addToCartApple.click();}
     @FindBy(xpath = "//*[@id=\"entry_212958\"]/form/div/div")
     private WebElement sizeRequired;
-    public void getTextInSizeRequirement(String text){
-        sizeRequired.getText();
+    public String getTextInSizeRequirement(){ return sizeRequired.getText();
     }
 
 

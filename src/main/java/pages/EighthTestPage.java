@@ -37,6 +37,6 @@ public class EighthTestPage extends BasePage{
     public void clickOnBuyNowButtonApple(){BuyNowButtonApple.click();}
     @FindBy(xpath = "//*[@id=\"content\"]/form/div/table/tbody/tr/td[5]")
     private WebElement UnitPriceOf30Apple;
-    public void getTextOfAppleUnitPrice(String text){UnitPriceOf30Apple.getText();}
+    public String getTextOfAppleUnitPrice(){ return UnitPriceOf30Apple.getText();}
 
 }

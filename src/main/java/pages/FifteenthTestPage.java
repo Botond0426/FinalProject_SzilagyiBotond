@@ -30,7 +30,7 @@ public class FifteenthTestPage extends BasePage{
     public void clickOnRewardPoints(){showYourRewardPoints.click();}
     @FindBy(xpath = "//*[@id=\"content\"]/p/b")
     private WebElement rewardPointsValue;
-    public void getTextOfRewardPoints(String text){rewardPointsValue.getText();}
+    public String getTextOfRewardPoints(){ return rewardPointsValue.getText();}
     @FindBy(xpath = "//*[@id=\"content\"]/div[3]/div/a")
     private WebElement continueButtonInRewards;
     public void clickOnContinueInRewards(){continueButtonInRewards.click();}

@@ -16,5 +16,5 @@ public class SeventhTestPage extends BasePage{
     public void clickOnMegaMenu1(){MegaMenu.click();}
     @FindBy(xpath = "//*[@id=\"content\"]/h1")
     private WebElement AboutUsTitle1;
-    public void getTextOfAboutUs(String text){AboutUsTitle1.getText();}
+    public String getTextOfAboutUs(){ return AboutUsTitle1.getText();}
 }
