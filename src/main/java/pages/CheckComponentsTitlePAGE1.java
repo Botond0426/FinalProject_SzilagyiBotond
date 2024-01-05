@@ -4,11 +4,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import pages.BasePage;
 
-public class FirstTestPage extends BasePage {
+public class CheckComponentsTitlePAGE1 extends BasePage {
 //this page selects for testing Components title after clicking-categories-components.
-    public FirstTestPage(WebDriver driver) {
+    public CheckComponentsTitlePAGE1(WebDriver driver) {
         super(driver);
         PageFactory.initElements(driver, this);
     }

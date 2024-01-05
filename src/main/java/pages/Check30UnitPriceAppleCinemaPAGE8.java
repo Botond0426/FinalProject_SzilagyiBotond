@@ -2,12 +2,11 @@ package pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.devtools.v85.page.Page;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class EighthTestPage extends BasePage{
-    public EighthTestPage(WebDriver driver){
+public class Check30UnitPriceAppleCinemaPAGE8 extends BasePage{
+    public Check30UnitPriceAppleCinemaPAGE8(WebDriver driver){
         super(driver);
         PageFactory.initElements(driver,this);
     }

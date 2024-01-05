@@ -1,13 +1,12 @@
 package pages;
 
-import com.fasterxml.jackson.databind.ser.Serializers;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class FifthTestPage extends BasePage {
-    public FifthTestPage(WebDriver driver){
+public class LeaveReviewOnBlogPAGE5 extends BasePage {
+    public LeaveReviewOnBlogPAGE5(WebDriver driver){
         super(driver);
         PageFactory.initElements(driver,this);
     }

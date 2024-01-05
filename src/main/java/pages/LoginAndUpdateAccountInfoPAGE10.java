@@ -2,12 +2,11 @@ package pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.devtools.v85.page.Page;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class TwelfthTestPage extends BasePage{
-    public TwelfthTestPage(WebDriver driver){
+public class LoginAndUpdateAccountInfoPAGE10 extends BasePage{
+    public LoginAndUpdateAccountInfoPAGE10(WebDriver driver){
         super(driver);
         PageFactory.initElements(driver,this);
     }
@@ -25,11 +24,15 @@ public class TwelfthTestPage extends BasePage{
     @FindBy(xpath = "//*[@id=\"content\"]/div/div[2]/div/div/form/input")
     private WebElement loginButton;
     public void clickOnLoginButton(){loginButton.click();}
-    @FindBy(xpath = "//*[@id=\"content\"]/div[1]/div/div/div[3]/a/i")
-    private WebElement modifyYourAddress;
-    public void clickOnModifyYourAddress(){modifyYourAddress.click();}
-    @FindBy(xpath = "//*[@id=\"content\"]/div[1]/table/tbody/tr/td[2]/a[2]")
-    private WebElement DeleteAddress;
-    public void clickOnDeleteAddress(){DeleteAddress.click();}
+    @FindBy(xpath = "//*[@id=\"content\"]/div[1]/div/div/div[1]/a/i")
+    private WebElement updateAccountInfo;
+    public void clickOnUpdateAccount(){updateAccountInfo.click();}
+    @FindBy(xpath = "//*[@id=\"content\"]/form/div/div[2]/input")
+    private WebElement submitAccountUpdate;
+    public void clickOnSubmitAccountUpdate(){submitAccountUpdate.click();}
+    @FindBy(css = "#account-account > div.alert.alert-success.alert-dismissible > i")
+    private WebElement getTextAfterUpdate;
+    public String setGetTextAfterUpdate(){return getTextAfterUpdate.getText();}
+
 
 }

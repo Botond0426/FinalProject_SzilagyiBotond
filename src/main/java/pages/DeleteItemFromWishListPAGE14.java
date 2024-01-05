@@ -2,12 +2,11 @@ package pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.devtools.v85.page.Page;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class FourteenthTestPage extends BasePage{
-    public FourteenthTestPage(WebDriver driver){
+public class DeleteItemFromWishListPAGE14 extends BasePage{
+    public DeleteItemFromWishListPAGE14(WebDriver driver){
         super(driver);
         PageFactory.initElements(driver,this);
     }

@@ -2,12 +2,11 @@ package pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.devtools.v85.page.Page;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class ThirteenthTestPage extends BasePage{
-    public ThirteenthTestPage(WebDriver driver){
+public class LoginAndDeleteAddressPAGE12 extends BasePage{
+    public LoginAndDeleteAddressPAGE12(WebDriver driver){
         super(driver);
         PageFactory.initElements(driver,this);
     }
@@ -25,14 +24,11 @@ public class ThirteenthTestPage extends BasePage{
     @FindBy(xpath = "//*[@id=\"content\"]/div/div[2]/div/div/form/input")
     private WebElement loginButton;
     public void clickOnLoginButton(){loginButton.click();}
-    @FindBy(xpath = "//*[@id=\"content\"]/div[1]/div/div/div[5]/a/i")
-    private WebElement subscribeNewsLetter;
-    public void clickOnSubscribeNL(){subscribeNewsLetter.click();}
-    @FindBy(xpath = "//*[@id=\"content\"]/form/fieldset/div/div/div[1]/label")
-    private WebElement subscribeYes;
-    public void clickOnYesSubscribe(){subscribeYes.click();}
-    @FindBy(xpath = "//*[@id=\"content\"]/form/div/div[2]/input")
-    private WebElement continueSubscribe;
-    public void clickOnContinueSubscribe(){continueSubscribe.click();}
+    @FindBy(xpath = "//*[@id=\"content\"]/div[1]/div/div/div[3]/a/i")
+    private WebElement modifyYourAddress;
+    public void clickOnModifyYourAddress(){modifyYourAddress.click();}
+    @FindBy(xpath = "//*[@id=\"content\"]/div[1]/table/tbody/tr/td[2]/a[2]")
+    private WebElement DeleteAddress;
+    public void clickOnDeleteAddress(){DeleteAddress.click();}
 
 }

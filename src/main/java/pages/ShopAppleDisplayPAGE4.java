@@ -5,8 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class FourthTestPage extends BasePage {
-    public FourthTestPage(WebDriver driver){
+public class ShopAppleDisplayPAGE4 extends BasePage {
+    public ShopAppleDisplayPAGE4(WebDriver driver){
         super(driver);
         PageFactory.initElements(driver,this);
 //this page selects elements for shopping apple display,but testing if the page allows user to buy without a size.

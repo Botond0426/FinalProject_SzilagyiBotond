@@ -5,21 +5,20 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.BasePage;
-import pages.FirstTestPage;
+import pages.CheckComponentsTitlePAGE1;
 
-public class FirstTestCaseComponentsCategory extends BasePage {
-    private FirstTestPage firstTestPage;
-    private static final By COMPONENTS_CATEGORY = By.cssSelector("#entry_217832 > a");
+public class CheckComponentsTitleInCategories1 extends BasePage {
+    private CheckComponentsTitlePAGE1 checkComponentsTitlePAGE1;
     @BeforeMethod
     public void setUp(){
         super.setUp();
-        firstTestPage = new FirstTestPage(driver);
+        checkComponentsTitlePAGE1 = new CheckComponentsTitlePAGE1(driver);
     }
     @Test()
     public void clickOnCategoryAndComponents(){
-        driver.findElement(COMPONENTS_CATEGORY).click();
-        firstTestPage.clickOnComponents();
-        String actualTitle = firstTestPage.getTextInTitle();
+        checkComponentsTitlePAGE1.clickOnCategories();
+        checkComponentsTitlePAGE1.clickOnComponents();
+        String actualTitle = checkComponentsTitlePAGE1.getTextInTitle();
         String expectedTitle = "Components";
         Assert.assertEquals(actualTitle, expectedTitle,"Title does not match");
     }
