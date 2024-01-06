@@ -11,17 +11,10 @@ public class ShopAppleDisplayPAGE4 extends BasePage {
         PageFactory.initElements(driver,this);
 //this page selects elements for shopping apple display,but testing if the page allows user to buy without a size.
     }
-   @FindBy(xpath = "//*[@id=\"swiper-wrapper-dd8d10b9920a42fe6\"]/div[2]/div/div[1]/div[2]/button[1]/i")
+   @FindBy(xpath = "//*[@id=\"swiper-wrapper-f87441010f743d79e5\"]/div[2]/div/div[2]/h4/a")
     private WebElement ShopAppleDisplay;
     public void clickOnShopAppleDisplay(){ShopAppleDisplay.click();}
-   @FindBy(xpath = "//*[@id=\"entry_212943\"]/div")
-    private WebElement minimumQtyRequirement;
-    public String getTextInRequirements(){ return minimumQtyRequirement.getText();
-    }
-    @FindBy(xpath = "//*[@id=\"entry_212964\"]/button")
-    private WebElement addToCartApple;
-    public void clickOnAddToCartApple(){addToCartApple.click();}
-    @FindBy(xpath = "//*[@id=\"entry_212958\"]/form/div/div")
+    @FindBy(xpath = "//*[@id=\"entry_216852\"]/div/text()")
     private WebElement sizeRequired;
     public String getTextInSizeRequirement(){ return sizeRequired.getText();
     }

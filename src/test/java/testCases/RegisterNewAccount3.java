@@ -9,14 +9,10 @@ import pages.RegisterUserPAGE3;
 
 public class RegisterNewAccount3 extends BasePage {
     private RegisterUserPAGE3 registerUserPAGE3;
-    private Actions actions;
-
     @BeforeMethod
     public void setUp() {
         super.setUp();
         registerUserPAGE3 = new RegisterUserPAGE3(driver);
-        actions = new Actions(driver);
-
     }
 
     @Test

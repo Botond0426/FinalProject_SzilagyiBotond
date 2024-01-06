@@ -29,7 +29,6 @@ public class CheckComponentsTitlePAGE1 extends BasePage {
     @FindBy(css = "#entry_212392 > h1")
     private WebElement ComponentsTitle;
 //PLEASE CORRECT ALL OF THE PAGES WITH THIS GETTEXT METHOD
-    public String getTextInTitle(){
-        return ComponentsTitle.getText();
+    public String getTextInTitle(){return ComponentsTitle.getText();
     }
 }
