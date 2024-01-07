@@ -18,11 +18,12 @@ public class GetTextOfSonyAddons6 extends BasePage {
 
     }
     @Test
-    public void clickOnAddons1(){
+    public void clickOnAddons1() {
         addOnsModuleSonyPAGE6.clickOnAddOns1();
-        addOnsModuleSonyPAGE6.clickOnAddOns1();
+    }
+    public void clickOnModules1(){
         addOnsModuleSonyPAGE6.clickOnModules1();
-        WebElement Sony1 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='swiper-wrapper-be9ad95eaa5a0b29']/div[8]/a/figure/figcaption")));
+        WebElement Sony1 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[1]/div[5]/div[1]/div[4]/div/div[2]/div/div[1]/div[8]/a/figure/figcaption")));
         addOnsModuleSonyPAGE6.clickOnSony1();
         String actualTitle = addOnsModuleSonyPAGE6.getTextOfSony();
         String expectedTitle = "Sony";

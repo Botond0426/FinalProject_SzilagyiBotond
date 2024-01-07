@@ -14,11 +14,16 @@ public class BuyAppleCinema4 extends BasePage {
         super.setUp();
         shopAppleDisplayPAGE4 = new ShopAppleDisplayPAGE4(driver);
     }
+
     @Test()
     public void shopAppleDisplayAndVerifySizeRequirement() {
         shopAppleDisplayPAGE4.clickOnShopAppleDisplay();
+    }
+
+    public void clickOnBuyNowButton() {
+        shopAppleDisplayPAGE4.clickOnBuyNowButton();
         String actualTitle = shopAppleDisplayPAGE4.getTextInSizeRequirement();
-        String expectedTitle = " This product has a minimum quantity of 2";
+        String expectedTitle = "Size required!";
         Assert.assertEquals(actualTitle, expectedTitle, "Title does not match");
     }
 

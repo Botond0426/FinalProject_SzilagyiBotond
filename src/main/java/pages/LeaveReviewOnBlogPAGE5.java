@@ -12,18 +12,18 @@ public class LeaveReviewOnBlogPAGE5 extends BasePage {
     }
     //This page selects elements from laptop picture blog and leaving a review
     // and checking if the save of the review was successful
-    @FindBy(xpath = "//*[@id=\"form-comment\"]/div[1]/text()")
+    @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div[7]/div/div[6]/div/div/div/div/div/div[1]/div[1]/div/div[2]/h4/a")
     private WebElement laptopBlog;
     public void clickOnLaptopBlog(){laptopBlog.click();}
     @FindBy(xpath = "//*[@id=\"input-name\"]")
     private WebElement yourNameAtReview;
     public void enterYourNameInField(String text){yourNameAtReview.sendKeys(text);}
-    @FindBy(xpath = "//*[@id=\"input-email\"]")
+    @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div[2]/div[2]/div[1]/div[9]/form/div[2]/input")
     private WebElement emailAddress;
-    public void enterEmailAddress(String text){emailAddress.sendKeys();}
+    public void enterEmailAddress(String text){emailAddress.sendKeys(text);}
     @FindBy(xpath = "//*[@id=\"input-comment\"]")
     private WebElement leaveComment;
-    public void enterComment(String text){leaveComment.sendKeys();}
+    public void enterComment(String text){leaveComment.sendKeys(text);}
     @FindBy(xpath = "//*[@id=\"button-comment\"]")
     private WebElement saveComment;
     public void clickOnSaveComment(){saveComment.click();}

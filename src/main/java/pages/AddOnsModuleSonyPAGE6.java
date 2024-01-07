@@ -19,7 +19,7 @@ public class AddOnsModuleSonyPAGE6 extends BasePage{
     private WebElement Modules1;
     public void clickOnModules1(){Modules1.click();}
    //click to Sony and see if the correct text is written in title
-    @FindBy(xpath = "//*[@id=\"swiper-wrapper-be9ad95eaa5a0b29\"]/div[8]/a/figure/figcaption")
+    @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div[4]/div/div[2]/div/div[1]/div[8]/a/figure/figcaption")
     private WebElement Sony1;
     public void clickOnSony1(){Sony1.click();}
     @FindBy(xpath = "//*[@id=\"entry_212427\"]/h1")

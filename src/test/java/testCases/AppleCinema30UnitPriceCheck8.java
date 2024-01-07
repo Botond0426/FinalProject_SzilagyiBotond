@@ -16,8 +16,12 @@ public class AppleCinema30UnitPriceCheck8 extends BasePage {
 
     }
     @Test
-    public void clickOnAppleIpad(){
+    public void clickOnAppleIpad() {
         check30UnitPriceAppleCinemaPAGE8.clickOnAppleIpad1();
+    }
+    public void clickOnCheckboxInstock1(){
+
+
         check30UnitPriceAppleCinemaPAGE8.clickOnCheckboxInstock1();
         check30UnitPriceAppleCinemaPAGE8.clickOnXXLSize1();
         check30UnitPriceAppleCinemaPAGE8.clickOnAppleCinema30();
