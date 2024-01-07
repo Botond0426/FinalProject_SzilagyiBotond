@@ -1,0 +1,1 @@
+{"uuid":"6eba11db-48c2-4a67-888c-d0d282497613","name":"testCases.BuyAppleCinema4.setUp","children":["d105186a-cdd1-4412-9bf2-a96592ae2fd1"],"description":"","befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1704553755653,"stop":1704553761812}],"afters":[],"start":1704553755652,"stop":1704553761813}
