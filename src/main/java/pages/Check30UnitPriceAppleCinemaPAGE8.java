@@ -10,7 +10,7 @@ public class Check30UnitPriceAppleCinemaPAGE8 extends BasePage{
         super(driver);
         PageFactory.initElements(driver,this);
     }
-    @FindBy(xpath = "//*[@id=\"entry281_216482\"]/div/div/ul/li/a")
+    @FindBy(xpath = "//*[@id=\"swiper-wrapper-b640ac3140f0bd5e\"]/div[2]/div/div[2]/h4/a")
     private WebElement AppleIpad1;
     public void clickOnAppleIpad1(){AppleIpad1.click();}
     @FindBy(xpath = "//*[@id=\"mz-filter-panel-0-3\"]/div/div")

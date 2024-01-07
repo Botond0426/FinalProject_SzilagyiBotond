@@ -12,7 +12,7 @@ public class LeaveReviewOnBlogPAGE5 extends BasePage {
     }
     //This page selects elements from laptop picture blog and leaving a review
     // and checking if the save of the review was successful
-    @FindBy(xpath = "//*[@id=\"swiper-wrapper-5c070a8c6316984b\"]/div[1]/div/div[1]/a/img")
+    @FindBy(xpath = "//*[@id=\"form-comment\"]/div[1]/text()")
     private WebElement laptopBlog;
     public void clickOnLaptopBlog(){laptopBlog.click();}
     @FindBy(xpath = "//*[@id=\"input-name\"]")
@@ -29,8 +29,7 @@ public class LeaveReviewOnBlogPAGE5 extends BasePage {
     public void clickOnSaveComment(){saveComment.click();}
     @FindBy(css = "#form-comment > div.alert.alert-success.alert-dismissible > i")
     private WebElement commentSaved;
-    public void getTextAfterComment(String text){
-        commentSaved.getText();
+    public String getTextAfterComment(String text){return commentSaved.getText();
     }
     // Thank you for your comment. It has been submitted to the webmaster for approval.
 }
