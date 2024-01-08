@@ -1,6 +1,7 @@
 package testCases;
 
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 import pages.BasePage;
 import pages.LoginExistingUserPAGE9;
 
@@ -12,7 +13,9 @@ public class LoginExistingUser9 extends BasePage {
         super.setUp();
         loginExistingUserPAGE9 = new LoginExistingUserPAGE9(driver);
     }
+    @Test
     public void loginUserEmail(){
+
         loginExistingUserPAGE9.clickOnLoginUser1();
     }
     public void loginUserPassword(){

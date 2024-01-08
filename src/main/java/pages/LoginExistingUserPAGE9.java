@@ -11,7 +11,7 @@ public class LoginExistingUserPAGE9 extends BasePage {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath = "//*[@id=\"widget-navbar-217834\"]/ul/li[6]/ul/li[1]/a/div/span")
+    @FindBy(xpath = "/html/body/div[1]/div[5]/header/div[3]/div[1]/div/div[3]/nav/div/ul/li[6]/a/div")
     private WebElement loginUser1;
 
     public void clickOnLoginUser1() {loginUser1.click();}
