@@ -21,7 +21,7 @@ public class LoginExistingUserPAGE9 extends BasePage {
     public void loginUserEmail(String text){typeInUserEmail.sendKeys(text);}
     @FindBy(xpath = "//*[@id=\"input-password\"]")
     private WebElement typeInUserPassword;
-    public void loginUserPassword(String text){typeInUserPassword.sendKeys();}
+    public void loginUserPassword(String text){typeInUserPassword.sendKeys(text);}
     @FindBy(xpath = "//*[@id=\"content\"]/div/div[2]/div/div/form/input")
     private WebElement loginButton;
     public void clickOnLoginButton(){loginButton.click();}
