@@ -15,10 +15,10 @@ public class LoginAndSubscribeNewsletterPAGE13 extends BasePage{
 
     public void clickOnLoginUser1() {loginUser1.click();}
 
-    @FindBy(xpath = "//*[@id=\"input-email\"]")
+    @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/div/div[2]/div/div/form/div[1]/input")
     private WebElement typeInUserEmail;
     public void loginUserEmail(String text){typeInUserEmail.sendKeys(text);}
-    @FindBy(xpath = "//*[@id=\"input-password\"]")
+    @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/div/div[2]/div/div/form/div[2]/input")
     private WebElement typeInUserPassword;
     public void loginUserPassword(String text){typeInUserPassword.sendKeys(text);}
     @FindBy(xpath = "//*[@id=\"content\"]/div/div[2]/div/div/form/input")
