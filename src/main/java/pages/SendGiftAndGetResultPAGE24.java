@@ -1,7 +1,9 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -23,9 +25,13 @@ public class SendGiftAndGetResultPAGE24 extends BasePage{
     private WebElement loginButton;
     public void clickOnLoginButton(){loginButton.click();}
     @FindBy(xpath = "/html/body/div[1]/div[5]/header/div[3]/div[1]/div/div[3]/nav/div/ul/li[6]/ul/li[5]/a/div/span")
-    private WebElement myVoucher;
-    public void clickOnMyVoucher(){myVoucher.click();}
-    @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/form/div[1]/div/input")
+    private WebElement myVoucherButton;
+    public void clickOnMyVoucherButton() {myVoucherButton.click();}
+    public void moveCursorArrowToMyAccountButton() {
+        Actions actions1 = new Actions(driver);
+        WebElement targetElement1 = driver.findElement(By.xpath("//*[@id='widget-navbar-217834']/ul/li[6]/a/div/span"));
+        actions1.moveToElement(targetElement1).perform();}
+    @FindBy(css = "#input-to-name")
     private WebElement recipientsName;
     public void typeInRecipientsNameField(String text){recipientsName.sendKeys(text);}
     @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/form/div[2]/div/input")
@@ -46,20 +52,13 @@ public class SendGiftAndGetResultPAGE24 extends BasePage{
     //PanicTester
     //PanicTester@PanicTester.com
     //other account
-    @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/p[2]/text()")
-    private WebElement textAfterSubmit;
-    public String getTextAfterSubmit(){return textAfterSubmit.getText();}
-//Thank you for purchasing a gift certificate! Once you have completed your order your gift certificate recipient will be sent an e-mail with details how to redeem their gift certificate.
-
     @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/div/a")
     private WebElement continueButtonAfterSubmit;
     public void clickOnContinueAfterSubmit(){continueButtonAfterSubmit.click();}
     @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/div[2]/a[2]")
     private WebElement checkOutButton;
     public void clickOnCheckOut(){checkOutButton.click();}
-    @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/form/div/div[1]/div/div[3]/div/text()[1]")
+    @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/form/div/div[1]/div/div[3]/div")
     private WebElement errorMessage;
     public String getErrorMessage(){return errorMessage.getText();}
-
-
 }

@@ -1,7 +1,9 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -24,6 +26,10 @@ public class SendGiftAndContactUsPAGE25 extends BasePage{
     public void clickOnLoginButton(){loginButton.click();}
     @FindBy(xpath = "/html/body/div[1]/div[5]/header/div[3]/div[1]/div/div[3]/nav/div/ul/li[6]/ul/li[5]/a/div/span")
     private WebElement myVoucher;
+    public void moveCursorArrowToMyAccountButton() {
+        Actions actions1 = new Actions(driver);
+        WebElement targetElement1 = driver.findElement(By.xpath("//*[@id='widget-navbar-217834']/ul/li[6]/a/div/span"));
+        actions1.moveToElement(targetElement1).perform();}
     public void clickOnMyVoucher(){myVoucher.click();}
     @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/form/div[1]/div/input")
     private WebElement recipientsName;
@@ -46,7 +52,7 @@ public class SendGiftAndContactUsPAGE25 extends BasePage{
     //PanicTester
     //PanicTester@PanicTester.com
     //other account
-    @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/p[2]/text()")
+    @FindBy(css = "#content > p:nth-child(3)")
     private WebElement textAfterSubmit;
     public String getTextAfterSubmit(){return textAfterSubmit.getText();}
 //Thank you for purchasing a gift certificate! Once you have completed your order your gift certificate recipient will be sent an e-mail with details how to redeem their gift certificate.
@@ -67,6 +73,9 @@ public class SendGiftAndContactUsPAGE25 extends BasePage{
     private WebElement yourEmailField;
     public void typeInYourEmailField(String text){yourEmailField.sendKeys(text);}
     @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/div/div[2]/div/div/form/div[3]/div/textarea")
+    private WebElement textContactArea;
+    public void typeInTextContactArea(String text){textContactArea.sendKeys(text);}
+    @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/div/div[2]/div/div/form/div[4]/div/input")
     private WebElement submitButton;
     public void clickOnSubmitButton(){submitButton.click();}
     @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/p[2]")

@@ -24,7 +24,7 @@ public class CheckOrderStatus20 extends BasePage {
         checkOrderStatusPAGE20.clickOnOrderHistory();
         checkOrderStatusPAGE20.clickOnViewOrders();
         String actualTitle = checkOrderStatusPAGE20.getStatusOfOrder();
-        String expectedTitle = "checkOrderStatusPAGE20";
+        String expectedTitle = "Pending";
         Assert.assertEquals(actualTitle, expectedTitle, "Order does not match");
         checkOrderStatusPAGE20.clickOnContinueButton();
 

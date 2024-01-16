@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -24,37 +25,48 @@ public class RegisterAccountAndModifyPAGE27 extends BasePage{
 
     @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/form/fieldset[1]/div[2]/div/input")
     private WebElement firstName;
-    public void typeInFirstNameField(){firstName.sendKeys();}
+    public void typeInFirstNameField(String text){firstName.sendKeys(text);}
     @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/form/fieldset[1]/div[2]/div/input")
     private WebElement lastName;
-    public void typeInLastName(){lastName.sendKeys();}
+    public void typeInLastName(String text){lastName.sendKeys(text);}
     @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/form/fieldset[1]/div[4]/div/input")
     private WebElement emailField;
-    public void typeInEmailField(){emailField.sendKeys();}
+    public void typeInEmailField(String text){emailField.sendKeys(text);}
     @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/form/fieldset[1]/div[5]/div/input")
     private WebElement phoneNumber;
-    public void typeInPhoneNumber(){phoneNumber.sendKeys();}
+    public void typeInPhoneNumber(String text){phoneNumber.sendKeys(text);}
     @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/form/fieldset[2]/div[1]/div/input")
     private WebElement passwordRegister;
-    public void typeInPassword1(){passwordRegister.sendKeys();}
+    public void typeInPassword1(String text){passwordRegister.sendKeys(text);}
     @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/form/fieldset[2]/div[2]/div/input")
     private WebElement passwordRepeat;
-    public void typeInPassword2(){passwordRepeat.sendKeys();}
+    public void typeInPassword2(String text){passwordRepeat.sendKeys(text);}
     @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/form/div/div/div/label")
     private WebElement privacyPolicy;
     public void checkPrivacyPolicy(){privacyPolicy.click();}
     @FindBy(xpath= "/html/body/div[1]/div[5]/div[1]/div/div/form/div/div/input")
     private WebElement registerButton;
     public void registerUser(){registerButton.click();}
-    @FindBy(xpath ="/html/body/div[1]/div[5]/div[1]/div/div/div/a")
+    @FindBy(xpath = "/html/body/div[1]/div[5]/header/div[3]/div[1]/div/div[3]/nav/div/ul/li[6]/a")
     private WebElement continueToMyAccount;
     public void clickOnContinueMyAccount(){continueToMyAccount.click();}
-    @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/aside/div/a[2]")
+    @FindBy(css = "div.col-lg-2_4:nth-child(1) > a:nth-child(1) > i:nth-child(1)")
     private WebElement modifyMenu;
     public void clickOnModify(){modifyMenu.click();}
 
     //new credentials:xyz@xyz.com
     //John Doe will be the new name
+    public void clearFirstName() {
+        firstNameModify.clear();
+    }
+
+    public void clearLastName() {
+        lastNameModify.clear();
+    }
+
+    public void clearEmail() {
+        emailFieldModify.clear();
+    }
     @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/form/fieldset/div[1]/div/input")
     private WebElement firstNameModify;
     public void modifyFirstName(String text){firstNameModify.sendKeys(text);}
@@ -70,5 +82,5 @@ public class RegisterAccountAndModifyPAGE27 extends BasePage{
     @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div[1]")
     private WebElement resultAfterMod;
     public String getMessageAfterModification(){return resultAfterMod.getText();}
-
+// Success: Your account has been successfully updated.
 }
