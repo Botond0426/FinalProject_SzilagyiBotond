@@ -39,16 +39,13 @@ public class RegisterForAffiliatePAGE28 extends BasePage{
     @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/form/fieldset[2]/div[2]/div/div[2]/label/input")
     private WebElement paypalCheckbox;
     public void checkPaypal(){paypalCheckbox.click();}
+    @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/form/fieldset[2]/div[4]/div/input")
+    private WebElement emailForPaypal;
+    public void typeInEmailForPayPal(String text){emailForPaypal.sendKeys(text);}
     @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/form/div/div/input[1]")
     private WebElement agreeToTerms;
     public void checkAgreementCheckbox(){agreeToTerms.click();}
-    @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/form/div/div/input[2]")
+    @FindBy(css = "#content > form > div > div > input.btn.btn-primary")
     private WebElement signUpButton;
     public void clickOnSignButton(){signUpButton.click();}
-    @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div[1]/i")
-    private WebElement messageAfterAffiliate;
-    public String getMessageAfterAffiliate(){return messageAfterAffiliate.getText();}
-    //log in with a user which doesnt has affiliate registered yet.
-
-
 }

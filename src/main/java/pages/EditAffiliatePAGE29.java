@@ -24,7 +24,7 @@ public class EditAffiliatePAGE29 extends BasePage{
     @FindBy(xpath = "//*[@id=\"content\"]/div/div[2]/div/div/form/input")
     private WebElement loginButton;
     public void clickOnLoginButton(){loginButton.click();}
-    @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div[2]/div/div[3]/div/a[1]/i")
+    @FindBy(css ="#content > div:nth-child(3) > div > a:nth-child(1) > i")
     private WebElement editAffiliateInfo;
     public void clickOnEditAffiliate(){editAffiliateInfo.click();}
     @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/form/fieldset[2]/div[2]/div/div[3]/label/input")
@@ -48,7 +48,7 @@ public class EditAffiliatePAGE29 extends BasePage{
     @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/form/div/div/input")
     private WebElement submitButton;
     public void clickOnSubmit(){submitButton.click();}
-    @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div[1]/text()")
+    @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div[1]")
     private WebElement messageAftermod;
     public String getMessageAfterSubmit(){return messageAftermod.getText();}
 

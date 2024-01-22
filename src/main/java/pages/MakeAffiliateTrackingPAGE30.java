@@ -30,9 +30,9 @@ public class MakeAffiliateTrackingPAGE30 extends BasePage{
     @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/form/div[1]/div/textarea")
     private WebElement yourTrackingCode;
     public void typeInTrackingCodeField(String text){yourTrackingCode.sendKeys(text);}
-    @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/form/div[2]/div/ul/li[1]/a")
-    private WebElement selectHTC;
-    public void clickOnHTC(){selectHTC.click();}
+    @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/form/div[2]/div/input")
+    private WebElement typeHTC;
+    public void typeInHTCTouchHD(String text){typeHTC.sendKeys(text);}
     @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/form/div[3]/div/textarea")
     private WebElement textArea;
     public void typeInTextArea(String text){textArea.sendKeys(text);}
