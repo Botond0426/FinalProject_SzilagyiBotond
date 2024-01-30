@@ -27,7 +27,7 @@ public class LoginAndCheckRewardsPointsPAGE15 extends BasePage{
     @FindBy(xpath = "//*[@id=\"content\"]/div[2]/div/div/div[3]/a/i")
     private WebElement showYourRewardPoints;
     public void clickOnRewardPoints(){showYourRewardPoints.click();}
-    @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/p/text()[1]")
+    @FindBy(css = "#content > p > b")
     private WebElement rewardPointsValue;
     public String getTextOfRewardPoints(){ return rewardPointsValue.getText();}
     // /html/body/div[1]/div[5]/div[1]/div/div/p/text()[1]

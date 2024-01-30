@@ -19,12 +19,11 @@ public class LoginCheckRewardsPoints15 extends BasePage {
         loginAndCheckRewardsPointsPAGE15.loginUserEmail("tester@tester.com");
         loginAndCheckRewardsPointsPAGE15.loginUserPassword("tester123");
         loginAndCheckRewardsPointsPAGE15.clickOnLoginButton();
-    }
-    public void clickOnRewardsPoints(){
+
         loginAndCheckRewardsPointsPAGE15.clickOnRewardPoints();
         loginAndCheckRewardsPointsPAGE15.getTextOfRewardPoints();
         String actualTitle = loginAndCheckRewardsPointsPAGE15.getTextOfRewardPoints();
-        String expectedTitle = "Your total number of reward points is: 0.";
+        String expectedTitle = "0";
         Assert.assertEquals(actualTitle,expectedTitle,"Your RewardsPoint does not match with expected");
         loginAndCheckRewardsPointsPAGE15.clickOnContinueInRewards();
     }
