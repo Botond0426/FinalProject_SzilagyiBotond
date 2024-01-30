@@ -18,20 +18,11 @@ public class BuyAppleCinema4 extends BasePage {
     @Test()
     public void shopAppleDisplayAndVerifySizeRequirement() {
         shopAppleDisplayPAGE4.clickOnShopAppleDisplay();
+            shopAppleDisplayPAGE4.clickOnBuyNowButton();
+            String actualTitle = shopAppleDisplayPAGE4.getTextInSizeRequirement();
+            String expectedTitle = "Size required!";
+            Assert.assertEquals(actualTitle, expectedTitle, "Title does not match");
+        }
     }
 
-    public void clickOnBuyNowButton() {
-        shopAppleDisplayPAGE4.clickOnBuyNowButton();
-        String actualTitle = shopAppleDisplayPAGE4.getTextInSizeRequirement();
-        String expectedTitle = "Size required!";
-        Assert.assertEquals(actualTitle, expectedTitle, "Title does not match");
-    }
 
-
-
-
-
-
-
-
-}

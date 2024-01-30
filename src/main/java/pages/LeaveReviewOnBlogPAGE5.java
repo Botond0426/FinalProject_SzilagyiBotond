@@ -27,7 +27,7 @@ public class LeaveReviewOnBlogPAGE5 extends BasePage {
     @FindBy(xpath = "//*[@id=\"button-comment\"]")
     private WebElement saveComment;
     public void clickOnSaveComment(){saveComment.click();}
-    @FindBy(css = "#form-comment > div.alert.alert-success.alert-dismissible > i")
+    @FindBy(xpath = "//*[@id=\"form-comment\"]/div[1]")
     private WebElement commentSaved;
     public String getTextAfterComment(String text){return commentSaved.getText();
     }

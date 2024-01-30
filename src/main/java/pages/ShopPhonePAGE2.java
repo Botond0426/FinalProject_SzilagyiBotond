@@ -146,7 +146,7 @@ public class ShopPhonePAGE2 extends BasePage {
         ClickOnContinue.click();
     }
 
-    @FindBy(css = "#content > script")
+    @FindBy(xpath = "//*[@id=\"button-confirm\"]")
     private WebElement confirmOrderButton;
 
     public void scrollAndClickOnConfirmOrderButton() {
@@ -154,10 +154,11 @@ public class ShopPhonePAGE2 extends BasePage {
         js.executeScript("window.scrollTo(0, document.body.scrollHeight);");
 
         // Now, find and click the Confirm Order button
-        WebElement element = new WebDriverWait(driver, Duration.ofSeconds(10))
+        WebElement element = new WebDriverWait(driver, Duration.ofSeconds(40))
                 .until(ExpectedConditions.visibilityOf(confirmOrderButton));
         scrollIntoView(element);
         element.click();
+
 
     }
 

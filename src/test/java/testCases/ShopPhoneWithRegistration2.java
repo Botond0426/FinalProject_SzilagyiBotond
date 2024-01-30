@@ -47,6 +47,7 @@ public class ShopPhoneWithRegistration2 extends BasePage {
 
         shopPhonePAGE2.scrollAndClickOnConfirmOrderButton();
 
+
         shopPhonePAGE2.clickOnContinueAfterOrder();
     }
 }
