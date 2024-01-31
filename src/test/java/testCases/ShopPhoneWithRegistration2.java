@@ -13,6 +13,7 @@ import pages.BasePage;
 import pages.ShopPhonePAGE2;
 
 import java.time.Duration;
+import java.util.Random;
 
 public class ShopPhoneWithRegistration2 extends BasePage {
     private ShopPhonePAGE2 shopPhonePAGE2;
@@ -32,7 +33,8 @@ public class ShopPhoneWithRegistration2 extends BasePage {
         shopPhonePAGE2.clickOnBuyNow();
         shopPhonePAGE2.enterTextInFirstNameField("test");
         shopPhonePAGE2.enterTextInSecondNameField("test");
-        shopPhonePAGE2.enterTextInEmailField("testers@testemail.com");
+        shopPhonePAGE2.enterTextInEmailField(generateEmailAddress());
+
         shopPhonePAGE2.enterPhoneNumber("1234567891");
         shopPhonePAGE2.enterPassword1("abcdefghijklmnop123.");
         shopPhonePAGE2.enterPassword2("abcdefghijklmnop123.");
@@ -49,5 +51,13 @@ public class ShopPhoneWithRegistration2 extends BasePage {
 
 
         shopPhonePAGE2.clickOnContinueAfterOrder();
+    }
+    public String generateEmailAddress() {
+        String str = "panitCity%s@testmial.ro";
+        Random random = new Random();
+        int x = random.nextInt(999);
+
+        String finalString = String.format(str, x);
+        return finalString;
     }
 }

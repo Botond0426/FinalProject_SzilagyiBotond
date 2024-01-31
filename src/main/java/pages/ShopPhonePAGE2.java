@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 
 public class ShopPhonePAGE2 extends BasePage {
     public ShopPhonePAGE2(WebDriver driver) {
@@ -32,10 +33,12 @@ public class ShopPhonePAGE2 extends BasePage {
         BuyNowButton1.click();
     }
 
-    @FindBy(css = "#input-payment-firstname")
+    @FindBy(xpath = "//*[@id=\"input-payment-firstname\"]")
     private WebElement FirstNameField;
 
     public void enterTextInFirstNameField(String text) {
+        WebElement element = new WebDriverWait(driver, Duration.ofSeconds(40))
+                .until(ExpectedConditions.visibilityOf(FirstNameField));
         FirstNameField.sendKeys(text);
     }
 
@@ -51,7 +54,10 @@ public class ShopPhonePAGE2 extends BasePage {
 
     public void enterTextInEmailField(String text) {
         EmailField.sendKeys(text);
+
     }
+
+
 
     @FindBy(xpath = "//*[@id=\"input-payment-telephone\"]")
     private WebElement PhoneNumber;
@@ -138,24 +144,27 @@ public class ShopPhonePAGE2 extends BasePage {
         ClickOnTnC.click();
     }
 
-    @FindBy(css = "#button-save > i")
+    @FindBy(xpath = "//button[@id='button-save']")
     private WebElement ClickOnContinue;
 
     public void clickOnContinue() {
         scrollIntoView(ClickOnContinue);
-        ClickOnContinue.click();
+
+//        ClickOnContinue.click();
+        jsCriptClick(ClickOnContinue);
     }
 
-    @FindBy(xpath = "//*[@id=\"button-confirm\"]")
+    @FindBy(xpath = "//button[@id='button-confirm']")
     private WebElement confirmOrderButton;
 
     public void scrollAndClickOnConfirmOrderButton() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollTo(0, document.body.scrollHeight);");
 
+
         // Now, find and click the Confirm Order button
         WebElement element = new WebDriverWait(driver, Duration.ofSeconds(40))
-                .until(ExpectedConditions.visibilityOf(confirmOrderButton));
+                .until(ExpectedConditions.elementToBeClickable(confirmOrderButton));
         scrollIntoView(element);
         element.click();
 
@@ -172,6 +181,15 @@ public class ShopPhonePAGE2 extends BasePage {
     private void scrollIntoView(WebElement element) {
         try {
             ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    private void jsCriptClick(WebElement element) {
+        try {
+            ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
         } catch (Exception e) {
             e.printStackTrace();
         }
