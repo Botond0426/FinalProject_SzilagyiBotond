@@ -17,8 +17,7 @@ public class LoginExistingUser9 extends BasePage {
     public void loginUserEmail(){
 
         loginExistingUserPAGE9.clickOnLoginUser1();
-    }
-    public void loginUserPassword(){
+
         loginExistingUserPAGE9.loginUserEmail("tester@tester.com");
         loginExistingUserPAGE9.loginUserPassword("tester123");
         loginExistingUserPAGE9.clickOnLoginButton();

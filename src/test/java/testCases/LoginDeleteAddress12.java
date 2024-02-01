@@ -18,8 +18,7 @@ public class LoginDeleteAddress12 extends BasePage {
         loginAndDeleteAddressPAGE12.loginUserEmail("tester@tester.com");
         loginAndDeleteAddressPAGE12.loginUserPassword("tester123");
         loginAndDeleteAddressPAGE12.clickOnLoginButton();
-    }
-    public void clickOnModifyYourAddress(){
+
         loginAndDeleteAddressPAGE12.clickOnModifyYourAddress();
         loginAndDeleteAddressPAGE12.clickOnDeleteAddress();
     }

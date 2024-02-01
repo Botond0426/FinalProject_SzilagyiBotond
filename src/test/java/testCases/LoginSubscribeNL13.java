@@ -18,8 +18,7 @@ public class LoginSubscribeNL13 extends BasePage {
         loginAndSubscribeNewsletterPAGE13.loginUserEmail("tester@tester.com");
         loginAndSubscribeNewsletterPAGE13.loginUserPassword("tester123");
         loginAndSubscribeNewsletterPAGE13.clickOnLoginButton();
-    }
-    public void clickOnSubscribeNL(){
+
         loginAndSubscribeNewsletterPAGE13.clickOnSubscribeNL();
         loginAndSubscribeNewsletterPAGE13.clickOnYesSubscribe();
         loginAndSubscribeNewsletterPAGE13.clickOnContinueSubscribe();

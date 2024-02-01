@@ -51,4 +51,7 @@ public class LoginAndModifyYourAddressPAGE11 extends BasePage{
     @FindBy(xpath = "//*[@id=\"content\"]/form/div/div[2]/input")
     private WebElement continueButtonAddress;
     public void clickOnContinueAddress(){continueButtonAddress.click();}
+    @FindBy(css = "div.alert:nth-child(2)")
+    private WebElement resultMessage;
+    public String getTextOfResult(){return resultMessage.getText();}
 }

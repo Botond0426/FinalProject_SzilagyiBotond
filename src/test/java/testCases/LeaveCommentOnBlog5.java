@@ -14,7 +14,7 @@ public class LeaveCommentOnBlog5 extends BasePage {
         super.setUp();
         leaveReviewOnBlogPAGE5 = new LeaveReviewOnBlogPAGE5(driver);
     }
-    @Test(priority = 2)
+    @Test
     public void clickOnLaptopBlog() {
         leaveReviewOnBlogPAGE5.clickOnLaptopBlog();
         leaveReviewOnBlogPAGE5.enterYourNameInField("TesterCommenter");

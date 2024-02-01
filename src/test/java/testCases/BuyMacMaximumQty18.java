@@ -16,16 +16,14 @@ public class BuyMacMaximumQty18 extends BasePage {
     @Test
     public void buyAnAppleImac(){
         buyMacWithMaxQtyPAGE18.clickOnAppleiMac();
-        buyMacWithMaxQtyPAGE18.clickOnAddToCartButton();
-        buyMacWithMaxQtyPAGE18.clickOnCartButton();
-        buyMacWithMaxQtyPAGE18.clickOnEditCartButton();
-    }
-    public void insertQty(){
-        buyMacWithMaxQtyPAGE18.insertQuantityOfProduct("714");
+        buyMacWithMaxQtyPAGE18.clickOnAddToCart();
+        buyMacWithMaxQtyPAGE18.clickOnViewCart();
+
+
+        buyMacWithMaxQtyPAGE18.insertQuantityOfProduct("14");
         buyMacWithMaxQtyPAGE18.reloadQuantityOfProduct();
         buyMacWithMaxQtyPAGE18.clickOnCheckOut();
-    }
-    public void loginAndMakeOrder(){
+
         buyMacWithMaxQtyPAGE18.clickOnLoginCheckbox();
         buyMacWithMaxQtyPAGE18.loginEmailForPurchase("tester@tester.com");
         buyMacWithMaxQtyPAGE18.loginPasswordForPurchase("tester123");
@@ -34,8 +32,7 @@ public class BuyMacMaximumQty18 extends BasePage {
         buyMacWithMaxQtyPAGE18.clickOnContinueButton();
         buyMacWithMaxQtyPAGE18.clickOnConfirmOrderButton();
 
-    }
-    public void getTextAfterOrder(){
+
         String actualTitle = buyMacWithMaxQtyPAGE18.getTextAfterPurchase();
         String expectedTitle = " Your order has been placed!";
         Assert.assertEquals(actualTitle,expectedTitle,"Title does not match");

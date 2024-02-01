@@ -16,12 +16,10 @@ public class AppleIpadPro17 extends BasePage {
     @Test
     public void clickOnAppleIpadProWidget(){
         getTextOfAppleIpadProPAGE17.clickOnAppleIpadProWidget();
-    }
-    public void getTextOfAppleIpad(){
         String actualTitle = getTextOfAppleIpadProPAGE17.getTextOfAppleIpad();
         String expectedTitle = "Apple ipad Pro";
         Assert.assertEquals(actualTitle,expectedTitle,"Title does not match with widget.");
-
+//This is a negative test,as the product does not match the advertised one:iPod Touch instead of Apple iPad Pro
     }
 
 

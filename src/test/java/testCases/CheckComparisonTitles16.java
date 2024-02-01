@@ -23,18 +23,14 @@ public class CheckComparisonTitles16 extends BasePage {
         checkIfComparisonWorksPAGE16.clickOnHomePageButton();
         checkIfComparisonWorksPAGE16.clickOnFridge();
         checkIfComparisonWorksPAGE16.clickOnCompareFridgeButton();
-    }
-    public void clickOnGeneralComparison(){
         checkIfComparisonWorksPAGE16.clickOnCompareButton();
-    }
-    public void getTextOf1stItem(){
+
         String actualTitle = checkIfComparisonWorksPAGE16.getTextOf1stItem();
-        String expectedTitle = "Apple Cinema 30";
+        String expectedTitle = "Apple Cinema 30\"";
         Assert.assertEquals(actualTitle, expectedTitle, "Text does not match");
-    }
-    public void getTextOf2ndItem(){
-        String actualTitle = checkIfComparisonWorksPAGE16.getTextOf2ndItem();
-        String expectedTitle = "iPhone";
+
+        String actualTitle2 = checkIfComparisonWorksPAGE16.getTextOf2ndItem();
+        String expectedTitle2 = "iPhone";
         Assert.assertEquals(actualTitle, expectedTitle, "Text does not match");
     }
 }

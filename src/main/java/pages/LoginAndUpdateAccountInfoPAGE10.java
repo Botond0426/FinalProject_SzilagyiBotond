@@ -30,7 +30,7 @@ public class LoginAndUpdateAccountInfoPAGE10 extends BasePage{
     @FindBy(xpath = "//*[@id=\"content\"]/form/div/div[2]/input")
     private WebElement submitAccountUpdate;
     public void clickOnSubmitAccountUpdate(){submitAccountUpdate.click();}
-    @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div[1]/i")
+    @FindBy(css = "div.alert:nth-child(2)")
     private WebElement getTextAfterUpdate;
     public String setGetTextAfterUpdate(){return getTextAfterUpdate.getText();}
 

@@ -1,5 +1,6 @@
 package testCases;
 
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.BasePage;
@@ -18,8 +19,7 @@ public class LoginModifyAddress11 extends BasePage {
         loginAndModifyYourAddressPAGE11.loginUserEmail("tester@tester.com");
         loginAndModifyYourAddressPAGE11.loginUserPassword("tester123");
         loginAndModifyYourAddressPAGE11.clickOnLoginButton();
-    }
-    public void clickOnModifyYourAddress(){
+
         loginAndModifyYourAddressPAGE11.clickOnModifyYourAddress();
         loginAndModifyYourAddressPAGE11.clickOnNewAddress();
         loginAndModifyYourAddressPAGE11.typeInFirstNameAddress("tester");
@@ -29,6 +29,9 @@ public class LoginModifyAddress11 extends BasePage {
         loginAndModifyYourAddressPAGE11.typeInPostalCodeAddress("457171");
         loginAndModifyYourAddressPAGE11.typeInCountyAddress("testCounty");
         loginAndModifyYourAddressPAGE11.clickOnContinueAddress();
+        String actualText = loginAndModifyYourAddressPAGE11.getTextOfResult();
+        String expectedText ="Your address has been successfully added";
+        Assert.assertEquals(actualText,expectedText,"Modification was not successful");
     }
 
 }

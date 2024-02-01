@@ -19,14 +19,12 @@ public class LoginUpdateAccountInfo10 extends BasePage {
         loginAndUpdateAccountInfoPAGE10.loginUserEmail("tester@tester.com");
         loginAndUpdateAccountInfoPAGE10.loginUserPassword("tester123");
         loginAndUpdateAccountInfoPAGE10.clickOnLoginButton();
-    }
-    public void clickOnUpdateAccount(){
+
         loginAndUpdateAccountInfoPAGE10.clickOnUpdateAccount();
         loginAndUpdateAccountInfoPAGE10.clickOnSubmitAccountUpdate();
-    }
-    public void setGetTextAfterUpdate(){
+
         String actualTitle = loginAndUpdateAccountInfoPAGE10.setGetTextAfterUpdate();
-        String expectedTitle = " Success: Your account has been successfully updated.";
+        String expectedTitle = "Success: Your account has been successfully updated.";
         Assert.assertEquals(actualTitle,expectedTitle,"Title does not match with expected.");
     }
 
