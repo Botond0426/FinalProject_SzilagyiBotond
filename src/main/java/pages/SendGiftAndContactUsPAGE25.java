@@ -69,16 +69,13 @@ public class SendGiftAndContactUsPAGE25 extends BasePage{
     @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/div/div[2]/div/div/form/div[1]/div/input")
     private WebElement yourNameField;
     public void typeInYourNameField(String text){yourNameField.sendKeys(text);}
-    @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/div/div[2]/div/div/form/div[2]/div/input")
-    private WebElement yourEmailField;
-    public void typeInYourEmailField(String text){yourEmailField.sendKeys(text);}
     @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/div/div[2]/div/div/form/div[3]/div/textarea")
     private WebElement textContactArea;
     public void typeInTextContactArea(String text){textContactArea.sendKeys(text);}
-    @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/div/div[2]/div/div/form/div[4]/div/input")
+    @FindBy(css = "input.btn")
     private WebElement submitButton;
     public void clickOnSubmitButton(){submitButton.click();}
-    @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/p[2]")
+    @FindBy(css = "#content > p:nth-child(3)")
     private WebElement messageAfterContact;
     public String getMessageAfterContact(){return messageAfterContact.getText();}
     //Your enquiry has been successfully sent to the store owner!

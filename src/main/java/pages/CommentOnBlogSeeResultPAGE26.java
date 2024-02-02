@@ -1,9 +1,14 @@
 package pages;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class CommentOnBlogSeeResultPAGE26 extends BasePage{
     public CommentOnBlogSeeResultPAGE26(WebDriver driver){
@@ -29,13 +34,18 @@ public class CommentOnBlogSeeResultPAGE26 extends BasePage{
     private WebElement blogImage;
     public void clickOnBlogPost(){blogImage.click();}
     //text of the comment:Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div[2]/div[2]/div[1]/div[9]/form/div[2]/textarea")
+    @FindBy(css = "#input-comment")
     private WebElement commentField;
-    public void typeInCommentField(String text){commentField.sendKeys(text);}
+    public void typeInCommentField(String text){
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", commentField);
+        WebElement commentWait = new WebDriverWait(driver, Duration.ofSeconds(15))
+                .until(ExpectedConditions.elementToBeClickable(commentField));
+        commentField.click();
+        commentField.sendKeys(text);}
     @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div[2]/div[2]/div[1]/div[9]/form/button")
     private WebElement postCommentButton;
     public void clickOnPostComment(){postCommentButton.click();}
-    @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div[2]/div[2]/div[1]/div[9]/form/div[1]/text()")
+    @FindBy(css = ".alert-success")
     private WebElement resultAfterComment;
     public String getTextOfResult(){return resultAfterComment.getText();}
     // Thank you for your comment. It has been submitted to the webmaster for approval.

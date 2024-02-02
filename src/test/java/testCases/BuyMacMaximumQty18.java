@@ -27,6 +27,7 @@ public class BuyMacMaximumQty18 extends BasePage {
         buyMacWithMaxQtyPAGE18.clickOnLoginCheckbox();
         buyMacWithMaxQtyPAGE18.loginEmailForPurchase("tester@tester.com");
         buyMacWithMaxQtyPAGE18.loginPasswordForPurchase("tester123");
+        buyMacWithMaxQtyPAGE18.clickOnLoginButton();
         buyMacWithMaxQtyPAGE18.clickOnSavedAddress();
         buyMacWithMaxQtyPAGE18.clickOnTnCcheckBox();
         buyMacWithMaxQtyPAGE18.clickOnContinueButton();
@@ -34,7 +35,7 @@ public class BuyMacMaximumQty18 extends BasePage {
 
 
         String actualTitle = buyMacWithMaxQtyPAGE18.getTextAfterPurchase();
-        String expectedTitle = " Your order has been placed!";
+        String expectedTitle = "Your order has been successfully processed!";
         Assert.assertEquals(actualTitle,expectedTitle,"Title does not match");
     }
 }

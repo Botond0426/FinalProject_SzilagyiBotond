@@ -32,19 +32,29 @@ public class EditAffiliatePAGE29 extends BasePage{
     public void checkBankTransferCheckbox(){bankTransfer.click();}
     @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/form/fieldset[2]/div[5]/div[1]/div/input")
     private WebElement bankNameField;
-    public void typeInBankNameField(String text){bankNameField.sendKeys(text);}
+    public void typeInBankNameField(String text){
+        bankNameField.clear();
+        bankNameField.sendKeys(text);}
     @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/form/fieldset[2]/div[5]/div[2]/div/input")
     private WebElement branchNumber;
-    public void typeInBranchNumberField(String text){branchNumber.sendKeys(text);}
+    public void typeInBranchNumberField(String text){
+        branchNumber.clear();
+        branchNumber.sendKeys(text);}
     @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/form/fieldset[2]/div[5]/div[3]/div/input")
     private  WebElement swiftCode;
-    public void typeInSWIFTcodeField(String text){swiftCode.sendKeys(text);}
+    public void typeInSWIFTcodeField(String text){
+        swiftCode.clear();
+        swiftCode.sendKeys(text);}
     @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/form/fieldset[2]/div[5]/div[4]/div/input")
     private WebElement accountName;
-    public void typeInAccountName(String text){accountName.sendKeys(text);}
+    public void typeInAccountName(String text){
+        accountNumber.clear();
+        accountName.sendKeys(text);}
     @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/form/fieldset[2]/div[5]/div[5]/div/input")
     private WebElement accountNumber;
-    public void typeInAccountNumber(String text){accountNumber.sendKeys(text);}
+    public void typeInAccountNumber(String text){
+        accountNumber.clear();
+        accountNumber.sendKeys(text);}
     @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/form/div/div/input")
     private WebElement submitButton;
     public void clickOnSubmit(){submitButton.click();}

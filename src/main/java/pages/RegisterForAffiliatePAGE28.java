@@ -1,9 +1,14 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class RegisterForAffiliatePAGE28 extends BasePage{
     public RegisterForAffiliatePAGE28(WebDriver driver){
@@ -29,23 +34,44 @@ public class RegisterForAffiliatePAGE28 extends BasePage{
     public void clickOnAffiliate(){affiliateMenu.click();}
     @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/form/fieldset[1]/div[1]/div/input")
     private WebElement companyName;
-    public void typeInCompanyField(String text){companyName.sendKeys(text);}
+    public void typeInCompanyField(String text){
+        WebElement textBoxForCompany = driver.findElement(By.xpath("/html/body/div[1]/div[5]/div[1]/div/div/form/fieldset[1]/div[1]/div/input"));
+
+        // Clear the existing text in the text box
+        textBoxForCompany.clear();
+        companyName.sendKeys(text);}
     @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/form/fieldset[1]/div[2]/div/input")
     private WebElement webSiteField;
-    public void typeInWebsiteField(String text){webSiteField.sendKeys(text);}
+    public void typeInWebsiteField(String text){
+        WebElement textBoxForWebsite = driver.findElement(By.xpath("/html/body/div[1]/div[5]/div[1]/div/div/form/fieldset[1]/div[2]/div/input"));
+
+        // Clear the existing text in the text box
+        textBoxForWebsite.clear();
+        webSiteField.sendKeys(text);}
     @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/form/fieldset[2]/div[1]/div/input")
     private WebElement taxId;
-    public void typeInTaxIDField(String text){taxId.sendKeys(text);}
+    public void typeInTaxIDField(String text){
+        WebElement textBoxForTaxID = driver.findElement(By.xpath("/html/body/div[1]/div[5]/div[1]/div/div/form/fieldset[2]/div[1]/div/input"));
+
+        // Clear the existing text in the text box
+        textBoxForTaxID.clear();
+        taxId.sendKeys(text);}
     @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/form/fieldset[2]/div[2]/div/div[2]/label/input")
     private WebElement paypalCheckbox;
     public void checkPaypal(){paypalCheckbox.click();}
     @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/form/fieldset[2]/div[4]/div/input")
     private WebElement emailForPaypal;
-    public void typeInEmailForPayPal(String text){emailForPaypal.sendKeys(text);}
-    @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/form/div/div/input[1]")
-    private WebElement agreeToTerms;
-    public void checkAgreementCheckbox(){agreeToTerms.click();}
-    @FindBy(css = "#content > form > div > div > input.btn.btn-primary")
+    public void typeInEmailForPayPal(String text){
+        WebElement textBoxForPaypal = driver.findElement(By.xpath("/html/body/div[1]/div[5]/div[1]/div/div/form/fieldset[2]/div[4]/div/input"));
+
+        // Clear the existing text in the text box
+        textBoxForPaypal.clear();
+
+        emailForPaypal.sendKeys(text);}
+
+    @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/form/div/div/input")
     private WebElement signUpButton;
-    public void clickOnSignButton(){signUpButton.click();}
+    public void clickOnSignButton(){
+
+        signUpButton.click();}
 }

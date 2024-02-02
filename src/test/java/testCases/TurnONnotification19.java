@@ -19,8 +19,7 @@ public class TurnONnotification19 extends BasePage {
         accountNotificationPAGE19.typeInEmailField("tester@tester.com");
         accountNotificationPAGE19.typeInPasswordField("tester123");
         accountNotificationPAGE19.clickOnLoginButton();
-    }
-    public void clickOnNotificationButton(){
+
         accountNotificationPAGE19.clickOnNotificationButton();
         accountNotificationPAGE19.clickOnBrandButton();
         accountNotificationPAGE19.clickOnContinueButton();

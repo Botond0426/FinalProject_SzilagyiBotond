@@ -24,8 +24,7 @@ public class RegisterAffiliate28 extends BasePage {
         registerForAffiliatePAGE28.typeInWebsiteField("www.testmanltd.com");
         registerForAffiliatePAGE28.typeInTaxIDField("EU12345678");
         registerForAffiliatePAGE28.checkPaypal();
-        registerForAffiliatePAGE28.typeInEmailForPayPal("testman@testman.com");
-        registerForAffiliatePAGE28.checkAgreementCheckbox();
+        registerForAffiliatePAGE28.typeInEmailForPayPal("aleco@aleco.com");
         registerForAffiliatePAGE28.clickOnSignButton();
     }
 }

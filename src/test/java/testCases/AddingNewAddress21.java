@@ -19,8 +19,8 @@ public class AddingNewAddress21 extends BasePage {
         addingNewAccountAddressPAGE21.typeInEmailField("tester@tester.com");
         addingNewAccountAddressPAGE21.typeInPasswordField("tester123");
         addingNewAccountAddressPAGE21.clickOnLoginButton();
-    }
-    public void ChangeAddress(){
+        addingNewAccountAddressPAGE21.clickOnAddressBookButton();
+
         addingNewAccountAddressPAGE21.clickOnNewAddressButton();
         addingNewAccountAddressPAGE21.typeInFirstNameField("tester");
         addingNewAccountAddressPAGE21.typeInLastNameField("tester");

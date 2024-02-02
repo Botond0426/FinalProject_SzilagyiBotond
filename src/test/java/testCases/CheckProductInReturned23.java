@@ -22,7 +22,7 @@ public class CheckProductInReturned23 extends BasePage {
         checkReturnedProductsPAGE23.clickOnReturnRequests();
         checkReturnedProductsPAGE23.clickOnReturnedProduct();
         String actualTitle = checkReturnedProductsPAGE23.getTextOfReturnedProduct();
-        String expectedTitle = "Nikon D300";
+        String expectedTitle = "HTC Touch HD";
         Assert.assertEquals(actualTitle,expectedTitle,"Product does not match");
 
     }

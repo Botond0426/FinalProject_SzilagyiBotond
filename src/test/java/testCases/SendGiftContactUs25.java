@@ -19,8 +19,7 @@ public class SendGiftContactUs25 extends BasePage {
         sendGiftAndContactUsPAGE25.typeInEmailField("tester@tester.com");
         sendGiftAndContactUsPAGE25.typeInPasswordField("tester123");
         sendGiftAndContactUsPAGE25.clickOnLoginButton();
-    }
-    public void moveCursorArrowToMyAccountButton(){
+
         sendGiftAndContactUsPAGE25.moveCursorArrowToMyAccountButton();
         sendGiftAndContactUsPAGE25.clickOnMyVoucher();
         sendGiftAndContactUsPAGE25.typeInRecipientsNameField("PanicTester");
@@ -29,22 +28,19 @@ public class SendGiftContactUs25 extends BasePage {
         sendGiftAndContactUsPAGE25.typeInTextArea("Happy Birthday!");
         sendGiftAndContactUsPAGE25.clickOnTnC();
         sendGiftAndContactUsPAGE25.clickOnContinueButton();
-    }
-    public void getTextAfterSubmit(){
+
         String actualTitle = sendGiftAndContactUsPAGE25.getTextAfterSubmit();
-        String expectedTitle = "Thank you for purchasing a gift certificate! Once you have completed your order your gift certificate recipient will be sent an e-mail with details how to redeem their gift certificate.\n";
+        String expectedTitle = "Thank you for purchasing a gift certificate! Once you have completed your order your gift certificate recipient will be sent an e-mail with details how to redeem their gift certificate.";
         Assert.assertEquals(actualTitle,expectedTitle,"Title does not match");
-    }
-    public void clickOnContinueAfterSubmit(){
+
         sendGiftAndContactUsPAGE25.clickOnContinueAfterSubmit();
         sendGiftAndContactUsPAGE25.clickOnCheckOut();
         sendGiftAndContactUsPAGE25.clickOnContactUs();
         sendGiftAndContactUsPAGE25.typeInYourNameField("tester tester");
-        sendGiftAndContactUsPAGE25.typeInYourEmailField("tester@tester.com");
+
         sendGiftAndContactUsPAGE25.typeInTextContactArea("User is not able to send gifts,as there is no payment option available.");
         sendGiftAndContactUsPAGE25.clickOnSubmitButton();
-    }
-    public void getMessageAfterContact(){
+
         String actualTitle1 = sendGiftAndContactUsPAGE25.getMessageAfterContact();
         String expectedTitle1 ="Your enquiry has been successfully sent to the store owner!";
         Assert.assertEquals(actualTitle1,expectedTitle1,"Title does not match");

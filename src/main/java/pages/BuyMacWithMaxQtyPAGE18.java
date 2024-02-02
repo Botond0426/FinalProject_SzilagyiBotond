@@ -1,6 +1,7 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -45,7 +46,7 @@ public class BuyMacWithMaxQtyPAGE18 extends BasePage{
         WebElement elementButton = new WebDriverWait(driver, Duration.ofSeconds(7))
                 .until(ExpectedConditions.elementToBeClickable(checkOut));
         checkOut.click();}
-    @FindBy(css = "div.custom-control-inline:nth-child(1) > label:nth-child(2)")
+    @FindBy(css = "div.custom-control-inline:nth-child(1)")
     private WebElement loginCheckBox;
     public void clickOnLoginCheckbox(){loginCheckBox.click();}
     @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/form/div/div[1]/div/div[2]/div[1]/div/input")
@@ -54,19 +55,30 @@ public class BuyMacWithMaxQtyPAGE18 extends BasePage{
     @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/form/div/div[1]/div/div[2]/div[2]/div/input")
     private WebElement passwordForLogin;
     public void loginPasswordForPurchase(String text){passwordForLogin.sendKeys(text);}
-    @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/form/div/div[1]/div/div[2]/div[1]/div[1]/label")
+    @FindBy(css = "#button-login")
+    private WebElement loginButton;
+    public void clickOnLoginButton(){loginButton.click();}
+    @FindBy(css = "#payment-address > div:nth-child(2) > div:nth-child(1)")
     private WebElement savedAddress;
-    public void clickOnSavedAddress(){savedAddress.click();}
-    @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/form/div/div[2]/div/div[5]/label/text()")
+    public void clickOnSavedAddress(){
+        WebElement savedAddressButton = new WebDriverWait(driver, Duration.ofSeconds(7))
+                .until(ExpectedConditions.elementToBeClickable(savedAddress));
+        savedAddress.click();}
+    @FindBy(css = "div.custom-control:nth-child(6) > label:nth-child(2)")
     private WebElement termsCheckbox;
-    public void clickOnTnCcheckBox(){termsCheckbox.click();}
-    @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/form/div/div[2]/div/button")
+    public void clickOnTnCcheckBox(){
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", termsCheckbox);
+        termsCheckbox.click();}
+    @FindBy(css = "#button-save")
     private WebElement continueButton;
     public void clickOnContinueButton(){continueButton.click();}
-    @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/div[4]/button")
+    @FindBy(css = "#button-confirm")
     private WebElement confirmOrderButton;
-    public void clickOnConfirmOrderButton(){confirmOrderButton.click();}
-    @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/h1/text()")
+    public void clickOnConfirmOrderButton(){
+        WebElement confirmOrderWait = new WebDriverWait(driver, Duration.ofSeconds(7))
+                .until(ExpectedConditions.elementToBeClickable(confirmOrderButton));
+        confirmOrderButton.click();}
+    @FindBy(css = "#content > p:nth-child(3)")
     private WebElement orderConfirmedTitle;
     public String getTextAfterPurchase(){return orderConfirmedTitle.getText();}
 

@@ -30,12 +30,10 @@ public class ModifyNewlyRegisteredAccount27 extends BasePage {
         registerAccountAndModifyPAGE27.typeInPassword2("TestCase123.");
         registerAccountAndModifyPAGE27.checkPrivacyPolicy();
         registerAccountAndModifyPAGE27.registerUser();
-    }
-    public void clickOnContinueMyAccount() {
+
         registerAccountAndModifyPAGE27.clickOnContinueMyAccount();
         registerAccountAndModifyPAGE27.clickOnModify();
-        }
-        public void clickOnModify(){
+
         registerAccountAndModifyPAGE27.clearFirstName();
         registerAccountAndModifyPAGE27.clearLastName();
         registerAccountAndModifyPAGE27.clearEmail();
@@ -46,8 +44,7 @@ public class ModifyNewlyRegisteredAccount27 extends BasePage {
         String actualTitle = registerAccountAndModifyPAGE27.getMessageAfterModification();
         String expectedTitle ="abc";
         Assert.assertEquals(actualTitle,expectedTitle,"Title does not match");
-    }
-    private void tryModification() {
+
         try {
             // Click on the element that triggers the alert
             registerAccountAndModifyPAGE27.clickOnModify();

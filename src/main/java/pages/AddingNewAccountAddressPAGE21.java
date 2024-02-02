@@ -22,10 +22,13 @@ public class AddingNewAccountAddressPAGE21 extends BasePage{
     @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/div/div[2]/div/div/form/input[1]")
     private WebElement loginButton;
     public void clickOnLoginButton(){loginButton.click();}
-    @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/aside/div/a[4]")
+    @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/div[1]/div/div/div[3]/a")
     private WebElement addressBook;
-    public void clickOnAddressBookButton(){addressBook.click();}
-    @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/div[2]/div[2]/a")
+    public void clickOnAddressBookButton(){addressBook.click();
+
+    }
+
+    @FindBy(css = ".float-right")
     private WebElement newAddressButton;
     public void clickOnNewAddressButton(){newAddressButton.click();}
     @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/form/fieldset/div[1]/div/input")
