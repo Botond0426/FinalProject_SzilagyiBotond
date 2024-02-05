@@ -1,0 +1,1 @@
+{"uuid":"acf0ec78-9788-461d-95da-c4f24fec0263","name":"testCases.AppleIpadPro17.setUp","children":["1474114f-1134-4260-a7ab-336d74df7680"],"description":"","befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1706882516703,"stop":1706882527017}],"afters":[],"start":1706882516702,"stop":1706882527018}
