@@ -1,9 +1,6 @@
 package pages;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -32,7 +29,7 @@ public class BuyMacWithMaxQtyPAGE18 extends BasePage{
     @FindBy(css = ".flex-nowrap > input:nth-child(1)")
     private WebElement quantityField;
     public void insertQuantityOfProduct(String text){
-
+        quantityField.clear();
         quantityField.sendKeys(text);}
     @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/form/div/table/tbody/tr/td[4]/div/div/button[1]")
     private WebElement reloadQuantity;
@@ -40,13 +37,14 @@ public class BuyMacWithMaxQtyPAGE18 extends BasePage{
     //714 is the quantity,but not the max,
     // somehow increasing the quantity and reloading quantity i was able to get 863 units and i was able to checkout
     //this is not 100% reproducible
-    @FindBy(css = "a.btn:nth-child(2)")
+    @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/div[2]/a[2]")
     private WebElement checkOut;
     public void clickOnCheckOut(){
-        WebElement elementButton = new WebDriverWait(driver, Duration.ofSeconds(7))
-                .until(ExpectedConditions.elementToBeClickable(checkOut));
+        JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+        jsExecutor.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+
         checkOut.click();}
-    @FindBy(css = "div.custom-control-inline:nth-child(1)")
+    @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/form/div/div[1]/div/div[1]/div/div[1]/label")
     private WebElement loginCheckBox;
     public void clickOnLoginCheckbox(){loginCheckBox.click();}
     @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/form/div/div[1]/div/div[2]/div[1]/div/input")
@@ -84,8 +82,17 @@ public class BuyMacWithMaxQtyPAGE18 extends BasePage{
 
 // Your order has been placed!
     //copy the title as its pasted
+    private void dismissAlert(WebElement element) {
+        try {
+            // Attempt to find and dismiss the alert
+            Alert alert = driver.switchTo().alert();
+            alert.dismiss();
+        } catch (Exception e) {
+            // Handle exceptions or log the error
+            e.printStackTrace();
+        }
 
-
+    }
 
 
 

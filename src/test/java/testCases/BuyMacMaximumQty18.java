@@ -20,7 +20,7 @@ public class BuyMacMaximumQty18 extends BasePage {
         buyMacWithMaxQtyPAGE18.clickOnViewCart();
 
 
-        buyMacWithMaxQtyPAGE18.insertQuantityOfProduct("14");
+        buyMacWithMaxQtyPAGE18.insertQuantityOfProduct("30");
         buyMacWithMaxQtyPAGE18.reloadQuantityOfProduct();
         buyMacWithMaxQtyPAGE18.clickOnCheckOut();
 
