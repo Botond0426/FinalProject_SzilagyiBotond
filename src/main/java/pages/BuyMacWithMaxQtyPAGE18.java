@@ -37,14 +37,16 @@ public class BuyMacWithMaxQtyPAGE18 extends BasePage{
     //714 is the quantity,but not the max,
     // somehow increasing the quantity and reloading quantity i was able to get 863 units and i was able to checkout
     //this is not 100% reproducible
-    @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/div[2]/a[2]")
+    @FindBy(css = "a.btn:nth-child(2)")
     private WebElement checkOut;
     public void clickOnCheckOut(){
         JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
         jsExecutor.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+        WebElement element2 = new WebDriverWait(driver, Duration.ofSeconds(20))
+                .until(ExpectedConditions.elementToBeClickable(checkOut));
 
         checkOut.click();}
-    @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/form/div/div[1]/div/div[1]/div/div[1]/label")
+    @FindBy(id = "input-account-login")
     private WebElement loginCheckBox;
     public void clickOnLoginCheckbox(){loginCheckBox.click();}
     @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/form/div/div[1]/div/div[2]/div[1]/div/input")

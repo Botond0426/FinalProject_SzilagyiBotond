@@ -9,6 +9,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import java.time.Duration;
+import java.util.Random;
 
 public class BasePage {
     public static WebDriver driver;
@@ -29,7 +30,7 @@ public class BasePage {
     public void setUp() {
         WebDriverManager.firefoxdriver().setup();
         FirefoxOptions options = new FirefoxOptions();
-        //options.addArguments("--headless");
+        options.addArguments("--headless");
         driver = new FirefoxDriver(options);
         driver.manage().window().maximize();
         driver.get(BASE_URL);
@@ -40,5 +41,13 @@ public class BasePage {
         if (driver != null) {
             driver.quit();
         }
+    }
+    public String generateEmailAddress() {
+        String str = "panitCity%s@testmail.ro";
+        Random random = new Random();
+        int x = random.nextInt(999);
+
+        String finalString = String.format(str, x);
+        return finalString;
     }
 }

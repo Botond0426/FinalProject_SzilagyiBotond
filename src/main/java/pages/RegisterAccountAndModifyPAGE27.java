@@ -26,7 +26,7 @@ public class RegisterAccountAndModifyPAGE27 extends BasePage{
     @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/form/fieldset[1]/div[2]/div/input")
     private WebElement firstName;
     public void typeInFirstNameField(String text){firstName.sendKeys(text);}
-    @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/form/fieldset[1]/div[2]/div/input")
+    @FindBy(id = "input-lastname")
     private WebElement lastName;
     public void typeInLastName(String text){lastName.sendKeys(text);}
     @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/form/fieldset[1]/div[4]/div/input")

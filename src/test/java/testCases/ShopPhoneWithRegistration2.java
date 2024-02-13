@@ -52,12 +52,5 @@ public class ShopPhoneWithRegistration2 extends BasePage {
 
         shopPhonePAGE2.clickOnContinueAfterOrder();
     }
-    public String generateEmailAddress() {
-        String str = "panitCity%s@testmial.ro";
-        Random random = new Random();
-        int x = random.nextInt(999);
 
-        String finalString = String.format(str, x);
-        return finalString;
-    }
 }

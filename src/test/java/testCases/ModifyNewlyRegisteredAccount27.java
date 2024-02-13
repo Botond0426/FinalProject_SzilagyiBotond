@@ -22,9 +22,9 @@ public class ModifyNewlyRegisteredAccount27 extends BasePage {
     public void clickOnMyAccount() {
         registerAccountAndModifyPAGE27.clickOnMyAccount();
         registerAccountAndModifyPAGE27.clickOnRegister();
-        registerAccountAndModifyPAGE27.typeInFirstNameField("TestCaseUser");
+        registerAccountAndModifyPAGE27.typeInFirstNameField("TheBiggestTesterDinSalaj");
         registerAccountAndModifyPAGE27.typeInLastName("TestCaseUser");
-        registerAccountAndModifyPAGE27.typeInEmailField("testcase@testcase.com");
+        registerAccountAndModifyPAGE27.typeInEmailField(generateEmailAddress());
         registerAccountAndModifyPAGE27.typeInPhoneNumber("0123456789");
         registerAccountAndModifyPAGE27.typeInPassword1("TestCase123.");
         registerAccountAndModifyPAGE27.typeInPassword2("TestCase123.");
@@ -39,10 +39,10 @@ public class ModifyNewlyRegisteredAccount27 extends BasePage {
         registerAccountAndModifyPAGE27.clearEmail();
         registerAccountAndModifyPAGE27.modifyFirstName("vxyz");
         registerAccountAndModifyPAGE27.modifyLastName("vxyz");
-        registerAccountAndModifyPAGE27.modifyEmail("Panic@vxyz.com");
+        registerAccountAndModifyPAGE27.modifyEmail(generateEmailAddress());
         registerAccountAndModifyPAGE27.submitModification();
         String actualTitle = registerAccountAndModifyPAGE27.getMessageAfterModification();
-        String expectedTitle ="abc";
+        String expectedTitle ="Success: Your account has been successfully updated.";
         Assert.assertEquals(actualTitle,expectedTitle,"Title does not match");
 
         try {
