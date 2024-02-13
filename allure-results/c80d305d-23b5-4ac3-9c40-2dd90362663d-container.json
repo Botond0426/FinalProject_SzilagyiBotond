@@ -1,0 +1,1 @@
+{"uuid":"c80d305d-23b5-4ac3-9c40-2dd90362663d","name":"BuyAndReturnProduct22.setUp","children":["c824dc31-f4f3-459c-8e44-e5811445f81b"],"description":"","befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1707843320533,"stop":1707843326141}],"afters":[],"start":1707843320533,"stop":1707843326141}

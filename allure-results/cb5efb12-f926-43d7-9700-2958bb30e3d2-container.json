@@ -1,0 +1,1 @@
+{"uuid":"cb5efb12-f926-43d7-9700-2958bb30e3d2","name":"GetTextOfSonyAddons6.setUp","children":["3bf992c2-331d-4c1f-9c25-8b0995c5eb49"],"description":"","befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1707843276817,"stop":1707843282076}],"afters":[],"start":1707843276817,"stop":1707843282076}

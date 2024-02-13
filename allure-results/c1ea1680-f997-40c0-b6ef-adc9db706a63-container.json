@@ -1,0 +1,1 @@
+{"uuid":"c1ea1680-f997-40c0-b6ef-adc9db706a63","name":"LoginCheckRewardsPoints15.setUp","children":["0fba6711-29aa-4b44-8952-dce9a1310131"],"description":"","befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1707843390744,"stop":1707843395902}],"afters":[],"start":1707843390742,"stop":1707843395902}

@@ -1,0 +1,1 @@
+{"uuid":"929e6861-c359-4212-b356-4223a6fb2f46","name":"RegisterNewAccount3.setUp","children":["27a028b7-1f1d-4d78-92fa-7491cc48046a"],"description":"","befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1707843241499,"stop":1707843246794}],"afters":[],"start":1707843241499,"stop":1707843246794}

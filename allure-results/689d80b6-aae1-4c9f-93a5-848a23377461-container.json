@@ -1,0 +1,1 @@
+{"uuid":"689d80b6-aae1-4c9f-93a5-848a23377461","name":"CheckProductInReturned23.setUp","children":["c9bb018c-830c-4e3a-b2f2-3ad97a2703a5"],"description":"","befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1707843370727,"stop":1707843376369}],"afters":[],"start":1707843370726,"stop":1707843376369}
