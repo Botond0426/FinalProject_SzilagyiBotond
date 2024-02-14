@@ -1,0 +1,1 @@
+{"uuid":"df5ca4ed-0846-4f55-bc55-d212426c026b","name":"BuyMacMaximumQty18Tests.setUp","children":["e98b1de7-1428-4a75-bfc8-6b2a19d85da1"],"description":"","befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1707899580575,"stop":1707899587960}],"afters":[],"start":1707899580574,"stop":1707899587961}
