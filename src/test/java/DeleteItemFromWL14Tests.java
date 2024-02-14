@@ -16,8 +16,7 @@ public class DeleteItemFromWL14Tests extends BasePage {
         deleteItemFromWishListPAGE14.loginUserEmail("tester@tester.com");
         deleteItemFromWishListPAGE14.loginUserPassword("tester123");
         deleteItemFromWishListPAGE14.clickOnLoginButton();
-    }
-    public void clickOnModifyYourWishlist(){
+
         deleteItemFromWishListPAGE14.clickOnModifyYourWishlist();
         deleteItemFromWishListPAGE14.clickOnRemoveFromWishlist();
         deleteItemFromWishListPAGE14.clickOnContinueWishlist();

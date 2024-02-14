@@ -15,7 +15,7 @@ public class SendGiftAndGetResultPAGE24 extends BasePage{
     @FindBy(xpath = "/html/body/div[1]/div[5]/header/div[3]/div[1]/div/div[3]/nav/div/ul/li[6]/a/div")
     private WebElement myAccount;
     public void clickOnMyAccount(){myAccount.click();}
-    @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/div/div[2]/div/div/form/div[1]/input")
+    @FindBy(id = "input-email")
     private WebElement emailField;
     public void typeInEmailField(String text){emailField.sendKeys(text);}
     @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/div/div[2]/div/div/form/div[2]/input")

@@ -16,6 +16,7 @@ public class SendGiftContactUs25Tests extends BasePage {
         sendGiftAndContactUsPAGE25.clickOnMyAccount();
         sendGiftAndContactUsPAGE25.typeInEmailField("tester@tester.com");
         sendGiftAndContactUsPAGE25.typeInPasswordField("tester123");
+
         sendGiftAndContactUsPAGE25.clickOnLoginButton();
 
         sendGiftAndContactUsPAGE25.moveCursorArrowToMyAccountButton();

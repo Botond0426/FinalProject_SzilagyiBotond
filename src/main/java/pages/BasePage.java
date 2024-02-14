@@ -30,7 +30,7 @@ public class BasePage {
     public void setUp() {
         WebDriverManager.firefoxdriver().setup();
         FirefoxOptions options = new FirefoxOptions();
-        options.addArguments("--headless");
+        //options.addArguments("--headless");
         driver = new FirefoxDriver(options);
         driver.manage().window().maximize();
         driver.get(BASE_URL);

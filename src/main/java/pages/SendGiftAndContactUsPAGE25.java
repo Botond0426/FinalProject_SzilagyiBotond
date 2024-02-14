@@ -6,6 +6,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class SendGiftAndContactUsPAGE25 extends BasePage{
     public SendGiftAndContactUsPAGE25(WebDriver driver){
@@ -60,10 +64,15 @@ public class SendGiftAndContactUsPAGE25 extends BasePage{
     @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/div/a")
     private WebElement continueButtonAfterSubmit;
     public void clickOnContinueAfterSubmit(){continueButtonAfterSubmit.click();}
-    @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/div[2]/a[2]")
-    private WebElement checkOutButton;
-    public void clickOnCheckOut(){checkOutButton.click();}
-    @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/form/div/div[1]/div/div[3]/div/a")
+    @FindBy(linkText = "Checkout")
+    private WebElement checkOut;
+    public void clickOnCheckOut(){
+
+        WebElement checkout = new WebDriverWait(driver, Duration.ofSeconds(40))
+                .until(ExpectedConditions.elementToBeClickable(checkOut));
+
+        checkOut.click();}
+    @FindBy(linkText = "contact us")
     private WebElement contactUsButton;
     public void clickOnContactUs(){contactUsButton.click();}
     @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/div/div[2]/div/div/form/div[1]/div/input")

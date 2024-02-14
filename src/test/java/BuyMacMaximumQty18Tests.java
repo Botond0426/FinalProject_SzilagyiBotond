@@ -13,24 +13,21 @@ public class BuyMacMaximumQty18Tests extends BasePage {
     }
     @Test
     public void buyAnAppleImac(){
+        buyMacWithMaxQtyPAGE18.clickOnMyAccount();
+        buyMacWithMaxQtyPAGE18.typeInEmailField("tester@tester.com");
+        buyMacWithMaxQtyPAGE18.typeInPasswordField("tester123");
+        buyMacWithMaxQtyPAGE18.clickOnLoginButton();
+        buyMacWithMaxQtyPAGE18.clickOnHomePage();
         buyMacWithMaxQtyPAGE18.clickOnAppleiMac();
         buyMacWithMaxQtyPAGE18.clickOnAddToCart();
         buyMacWithMaxQtyPAGE18.clickOnViewCart();
-
-
-        buyMacWithMaxQtyPAGE18.insertQuantityOfProduct("8");
+        buyMacWithMaxQtyPAGE18.insertQuantityOfProduct("5");
         buyMacWithMaxQtyPAGE18.reloadQuantityOfProduct();
         buyMacWithMaxQtyPAGE18.clickOnCheckOut();
-
-        buyMacWithMaxQtyPAGE18.clickOnLoginCheckbox();
-        buyMacWithMaxQtyPAGE18.loginEmailForPurchase("tester@tester.com");
-        buyMacWithMaxQtyPAGE18.loginPasswordForPurchase("tester123");
-        buyMacWithMaxQtyPAGE18.clickOnLoginButton();
         buyMacWithMaxQtyPAGE18.clickOnSavedAddress();
         buyMacWithMaxQtyPAGE18.clickOnTnCcheckBox();
         buyMacWithMaxQtyPAGE18.clickOnContinueButton();
         buyMacWithMaxQtyPAGE18.clickOnConfirmOrderButton();
-
 
         String actualTitle = buyMacWithMaxQtyPAGE18.getTextAfterPurchase();
         String expectedTitle = "Your order has been successfully processed!";
