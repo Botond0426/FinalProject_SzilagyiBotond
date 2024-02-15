@@ -1,0 +1,1 @@
+{"uuid":"40bde7b4-9ae2-4211-80fe-e5950cf1ed37","name":"CheckUnitPriceTests.setUp","children":["ac984dc4-b2e1-43fd-8aac-940e632f20b8"],"description":"","befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1708031805406,"stop":1708031815103}],"afters":[],"start":1708031805405,"stop":1708031815104}

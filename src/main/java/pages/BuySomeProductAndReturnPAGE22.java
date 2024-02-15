@@ -44,6 +44,7 @@ public class BuySomeProductAndReturnPAGE22 extends BasePage{
     @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/form/div/div[2]/div/div[5]/label")
     private WebElement termsConditions;
     public void clickOnTnC(){termsConditions.click();}
+
     @FindBy(xpath = "/html/body/div[1]/div[5]/div[1]/div/div/form/div/div[2]/div/button")
     private WebElement continueButton;
     public void clickOnContinueButton(){continueButton.click();}

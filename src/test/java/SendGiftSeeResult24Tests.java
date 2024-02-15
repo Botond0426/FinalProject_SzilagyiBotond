@@ -16,8 +16,8 @@ public class SendGiftSeeResult24Tests extends BasePage {
     public void clickOnMyAccount() {
         sendGiftAndGetResultPAGE24.clickOnMyAccount();
 
-        sendGiftAndGetResultPAGE24.typeInEmailField("tester@tester.com");
-        sendGiftAndGetResultPAGE24.typeInPasswordField("tester123");
+        sendGiftAndGetResultPAGE24.typeInEmailField("panicboy@gmail.com");
+        sendGiftAndGetResultPAGE24.typeInPasswordField("panicboy123");
         sendGiftAndGetResultPAGE24.clickOnLoginButton();
         sendGiftAndGetResultPAGE24.moveCursorArrowToMyAccountButton();
         sendGiftAndGetResultPAGE24.clickOnMyVoucherButton();
