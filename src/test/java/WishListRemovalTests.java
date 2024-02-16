@@ -20,6 +20,7 @@ public class WishListRemovalTests extends BasePage {
         wishListRemovalPAGE.clickOnModifyYourWishlist();
         wishListRemovalPAGE.clickOnRemoveFromWishlist();
         wishListRemovalPAGE.clickOnContinueWishlist();
+        wishListRemovalPAGE.clickOnMyAccountButton();
         wishListRemovalPAGE.clickOnLogout1();
 
 

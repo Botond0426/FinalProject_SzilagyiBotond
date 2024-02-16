@@ -24,6 +24,7 @@ public class UpdateAccountInfoTests extends BasePage {
         String actualTitle = updateAccountInfoPAGE.setGetTextAfterUpdate();
         String expectedTitle = "Success: Your account has been successfully updated.";
         Assert.assertEquals(actualTitle,expectedTitle,"Title does not match with expected.");
+        updateAccountInfoPAGE.clickOnMyAccountButton();
         updateAccountInfoPAGE.clickOnLogout1();
     }
 

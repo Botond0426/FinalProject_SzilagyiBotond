@@ -1,0 +1,1 @@
+{"uuid":"a801ade1-d434-41c1-bba3-180488b84a86","name":"CheckMaximumQuantityTests.setUp","children":["5a3e958b-cfb0-46b3-ac91-261a4a9c5eea"],"description":"","befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1708072530782,"stop":1708072538279}],"afters":[],"start":1708072530781,"stop":1708072538280}

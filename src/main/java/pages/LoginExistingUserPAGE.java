@@ -25,5 +25,11 @@ public class LoginExistingUserPAGE extends BasePage {
     @FindBy(xpath = "//*[@id=\"content\"]/div/div[2]/div/div/form/input")
     private WebElement loginButton;
     public void clickOnLoginButton(){loginButton.click();}
+    @FindBy(css = "#widget-navbar-217834 > ul > li:nth-child(6) > a")
+    private WebElement myAccountButton;
+    public void clickOnMyAccountButton(){myAccountButton.click();}
+    @FindBy(css = "#column-right > div > a:nth-child(14)")
+    private WebElement logoutButton1;
+    public void clickOnLogout1(){logoutButton1.click();}
 
 }

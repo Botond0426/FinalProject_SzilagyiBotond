@@ -30,6 +30,8 @@ public class ModifyAddressTests extends BasePage {
         String actualText = modifyAddressPAGE.getTextOfResult();
         String expectedText ="Your address has been successfully added";
         Assert.assertEquals(actualText,expectedText,"Modification was not successful");
+        modifyAddressPAGE.clickOnMyAccountButton();
+        modifyAddressPAGE.clickOnLogout1();
     }
 
 }

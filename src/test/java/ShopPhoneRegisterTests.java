@@ -1,16 +1,16 @@
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.BasePage;
-import pages.ShopPhoneRegisterPAGE2;
+import pages.ShopPhoneRegisterPAGE;
 
 public class ShopPhoneRegisterTests extends BasePage {
-    private ShopPhoneRegisterPAGE2 shopPhonePAGE2;
+    private ShopPhoneRegisterPAGE shopPhonePAGE2;
 
 
     @BeforeMethod
     public void setUp() {
         super.setUp();
-        shopPhonePAGE2 = new ShopPhoneRegisterPAGE2(driver);
+        shopPhonePAGE2 = new ShopPhoneRegisterPAGE(driver);
     }
 
     @Test(priority = 1)

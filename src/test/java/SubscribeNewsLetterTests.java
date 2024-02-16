@@ -20,6 +20,7 @@ public class SubscribeNewsLetterTests extends BasePage {
         subscribeNewsLetterPAGE.clickOnSubscribeNL();
         subscribeNewsLetterPAGE.clickOnYesSubscribe();
         subscribeNewsLetterPAGE.clickOnContinueSubscribe();
+        subscribeNewsLetterPAGE.clickOnMyAccountButton();
         subscribeNewsLetterPAGE.clickOnLogout1();
     }
 

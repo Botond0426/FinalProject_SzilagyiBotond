@@ -46,4 +46,7 @@ public class RegisterUserPAGE extends BasePage{
     public void clickOnContinueRegistration(){
         ContinueRegistration.click();
     }
+
+
+
 }

@@ -33,6 +33,9 @@ public class UpdateAccountInfoPAGE extends BasePage{
     @FindBy(css = "div.alert:nth-child(2)")
     private WebElement getTextAfterUpdate;
     public String setGetTextAfterUpdate(){return getTextAfterUpdate.getText();}
+    @FindBy(css = "#widget-navbar-217834 > ul > li:nth-child(6) > a")
+    private WebElement myAccountButton;
+    public void clickOnMyAccountButton(){myAccountButton.click();}
     @FindBy(css = "#column-right > div > a:nth-child(14)")
     private WebElement logoutButton1;
     public void clickOnLogout1(){logoutButton1.click();}

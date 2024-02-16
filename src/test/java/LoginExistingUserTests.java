@@ -19,6 +19,8 @@ public class LoginExistingUserTests extends BasePage {
         loginExistingUserPAGE.loginUserEmail("andrewcollins@andrewmail.com");
         loginExistingUserPAGE.loginUserPassword("testcase123");
         loginExistingUserPAGE.clickOnLoginButton();
+        loginExistingUserPAGE.clickOnMyAccountButton();
+        loginExistingUserPAGE.clickOnLogout1();
     }
 
 

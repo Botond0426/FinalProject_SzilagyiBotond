@@ -33,6 +33,9 @@ public class SubscribeNewsLetterPAGE extends BasePage{
     @FindBy(xpath = "//*[@id=\"content\"]/form/div/div[2]/input")
     private WebElement continueSubscribe;
     public void clickOnContinueSubscribe(){continueSubscribe.click();}
+    @FindBy(css = "#widget-navbar-217834 > ul > li:nth-child(6) > a")
+    private WebElement myAccountButton;
+    public void clickOnMyAccountButton(){myAccountButton.click();}
     @FindBy(css = "#column-right > div > a:nth-child(14)")
     private WebElement logoutButton1;
     public void clickOnLogout1(){logoutButton1.click();}

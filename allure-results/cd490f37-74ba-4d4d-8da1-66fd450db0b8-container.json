@@ -1,0 +1,1 @@
+{"uuid":"cd490f37-74ba-4d4d-8da1-66fd450db0b8","name":"CheckOrderStatus20Tests.setUp","children":["57b8e48a-eaf8-44e1-a143-1a283f9e8474"],"description":"","befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1708073920526,"stop":1708073928279}],"afters":[],"start":1708073920526,"stop":1708073928279}
